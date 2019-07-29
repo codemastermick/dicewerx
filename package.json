@@ -7,7 +7,9 @@
     "test": "mocha --reporter spec",
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "lint": "tslint --project \"./tsconfig.json\""
+    "lint": "tslint --project \"./tsconfig.json\"",
+    "docs": "typedoc --out docs src",
+    "gh-pages": "rimraf docs && npm run docs && gh-pages -d docs"
   },
   "repository": {
     "type": "git",
@@ -24,8 +26,10 @@
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.6.8",
     "chai": "^4.2.0",
+    "gh-pages": "^2.0.1",
     "mocha": "^6.2.0",
     "tslint": "^5.18.0",
+    "typedoc": "^0.15.0",
     "typescript": "^3.5.3"
   },
   "files": [
