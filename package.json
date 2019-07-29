@@ -9,7 +9,8 @@
     "build:watch": "tsc --watch",
     "lint": "tslint --project \"./tsconfig.json\"",
     "docs": "typedoc --out docs src",
-    "gh-pages": "rimraf docs && npm run docs && gh-pages -d docs"
+    "gh-pages": "rimraf docs && npm run docs && gh-pages -d docs && echo $null >> ./docs/.nojekyll",
+    "prep": "npm run lint && npm run test && npm run build && npm run gh-pages"
   },
   "repository": {
     "type": "git",
