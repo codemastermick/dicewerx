@@ -1,0 +1,19 @@
+{
+  "name": "dicewerx",
+  "version": "1.0.0",
+  "description": "Standard dice notation parser and evaluator",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codemastermick/dicewerx.git"
+  },
+  "author": "codemastermick",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codemastermick/dicewerx/issues"
+  },
+  "homepage": "https://github.com/codemastermick/dicewerx#readme"
+}
