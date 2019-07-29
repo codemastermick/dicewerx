@@ -7,7 +7,7 @@ const expression="4d6-L*100";
 describe('simple validation test', () => {
   it('should return greater than 0', () => {
     var result = index.evaluate(expression);
-    expect(result).to.above(0);
+    expect(result).to.be.above(0);
   });
   it('should return a set of dice', () => {
     var result = index.forgeDiceFromExpression(expression);
