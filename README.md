@@ -12,3 +12,5 @@ evaluate("1d20")
 evaluate("4d6-L")
 evaluate("4d4*10")
 ```
+
+Documentation available at https://codemastermick.github.io/dicewerx/index.html
