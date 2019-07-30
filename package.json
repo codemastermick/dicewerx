@@ -1,6 +1,6 @@
 {
   "name": "dicewerx",
-  "version": "1.0.4",
+  "version": "1.0.9",
   "description": "Standard dice notation parser and evaluator",
   "main": "dist/index.js",
   "scripts": {
@@ -35,6 +35,6 @@
     "typescript": "^3.5.3"
   },
   "files": [
-    "./dist"
+    "dist"
   ]
 }
