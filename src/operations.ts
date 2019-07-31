@@ -24,3 +24,10 @@ export function sum(numbers: Die[]): number {
   }
   return total;
 }
+
+export function add(dieA: Die, dieB: Die): Die[] {
+  const dice = [];
+  dice[0] = dieA;
+  dice[1] = dieB;
+  return dice;
+}
