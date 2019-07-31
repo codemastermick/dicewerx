@@ -1,6 +1,6 @@
 {
   "name": "dicewerx",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Standard dice notation parser and evaluator",
   "main": "dist/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "docs": "typedoc --out docs src",
     "gh-pages": "rimraf docs && npm run docs && gh-pages -d docs && echo $null >> ./docs/.nojekyll",
     "prep": "npm run lint && npm run test && npm run build && npm run gh-pages",
-    "prepublish": "npm run prep; git push"
+    "prepublish": "npm run prep"
   },
   "repository": {
     "type": "git",
