@@ -36,5 +36,16 @@
   },
   "files": [
     "dist"
+  ],
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "dependencies": {},
+  "keywords": [
+    "dice",
+    "rolling",
+    "rpg",
+    "d20"
   ]
 }
