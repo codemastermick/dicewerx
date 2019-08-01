@@ -14,4 +14,14 @@ describe('simple validation test', () => {
     const length=Number(index.getDice(expression).split("d")[0]);
     expect(result.length).to.equal(length);
   });
+  it('should return 2', () => {
+    var dice=index.forgeDiceFromExpression("2d6");
+    var result = index.rollMin(dice);
+    expect(result).to.be.equal(2);
+  });
+  it('should return 12', () => {
+    var dice=index.forgeDiceFromExpression("2d6");
+    var result = index.rollMax(dice);
+    expect(result).to.be.equal(12);
+  });
 });
