@@ -31,3 +31,19 @@ export function add(dieA: Die, dieB: Die): Die[] {
   dice[1] = dieB;
   return dice;
 }
+
+export function rollMax(dice: Die[]): number {
+  let total = 0;
+  dice.forEach((die) => {
+    total += die.sides;
+  });
+  return total;
+}
+
+export function rollMin(dice: Die[]): number {
+  let total = 0;
+  dice.forEach((die) => {
+    total += 1;
+  });
+  return total;
+}
