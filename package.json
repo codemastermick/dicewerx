@@ -1,6 +1,6 @@
 {
   "name": "dicewerx",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "Standard dice notation parser and evaluator",
   "main": "dist/index.js",
   "scripts": {
@@ -8,9 +8,7 @@
     "build": "tsc",
     "build:watch": "tsc --watch",
     "lint": "tslint --project \"./tsconfig.json\"",
-    "docs": "typedoc --out docs src",
-    "gh-pages": "rimraf docs && npm run docs && gh-pages -d docs && echo $null >> ./docs/.nojekyll",
-    "prep": "npm run lint && npm run test && npm run build && npm run gh-pages"
+    "prep": "npm run lint && npm run test && npm run build"
   },
   "repository": {
     "type": "git",
@@ -27,18 +25,14 @@
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.6.8",
     "chai": "^4.2.0",
-    "codecov": "^3.5.0",
-    "gh-pages": "^2.1.0",
     "mocha": "^6.2.0",
     "tslint": "^5.18.0",
-    "typedoc": "^0.15.0",
     "typescript": "^3.5.3"
   },
   "files": [
     "dist"
   ],
   "directories": {
-    "doc": "docs",
     "test": "test"
   },
   "dependencies": {},
