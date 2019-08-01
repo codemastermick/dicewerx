@@ -28,7 +28,7 @@
     "@types/node": "^12.6.8",
     "chai": "^4.2.0",
     "codecov": "^3.5.0",
-    "gh-pages": "^2.0.1",
+    "gh-pages": "^2.1.0",
     "mocha": "^6.2.0",
     "tslint": "^5.18.0",
     "typedoc": "^0.15.0",
