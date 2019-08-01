@@ -19,8 +19,8 @@ export function dropHighest(numbers: Die[]): Die[] {
 }
 export function sum(numbers: Die[]): number {
   let total = 0;
-  for (let i = 0; i < numbers.length; i++) {
-    total += numbers[i].roll();
+  for (const die of numbers) {
+    total += die.roll();
   }
   return total;
 }
@@ -34,15 +34,15 @@ export function add(dieA: Die, dieB: Die): Die[] {
 
 export function rollMax(dice: Die[]): number {
   let total = 0;
-  for (let i = 0; i < dice.length; i++) {
-    total += dice[i].sides;
+  for (const die of dice) {
+    total += die.sides;
   }
   return total;
 }
 
 export function rollMin(dice: Die[]): number {
   let total = 0;
-  for (let i = 0; i < dice.length; i++) {
+  for (const die of dice) {
     total += 1;
   }
   return total;
