@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/codemastermick/dicewerx.git"
   },
-  "author": "codemastermick",
+  "author": "codemastermick <codemastermick@gmail.com> (https://github.com/codemastermick)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/codemastermick/dicewerx/issues"
