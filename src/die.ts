@@ -6,6 +6,7 @@ export class Die {
     this.result = this.roll();
   }
   public roll(): number {
-    return Math.floor(Math.random() * this.sides + 1);
+    this.result = Math.floor(Math.random() * this.sides + 1);
+    return this.result;
   }
 }
