@@ -1,4 +1,3 @@
-export { sum, rollMin, rollMax } from "./operations";
-export { evaluate, getDice } from "./parser";
-export { Die } from "./die";
-export { forgeDiceFromExpression } from "./diceforge";
+export { rollMin, rollMax } from "./operations";
+export { evaluate } from "./parser";
+export { forge } from "./diceforge";
