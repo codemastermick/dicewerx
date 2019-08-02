@@ -31,6 +31,7 @@ export function evaluate(expression: string): number {
   const dropInvoked = getDrop(expression) !== "null";
   const operandInvoked = getOperator(expression) !== "null";
   const isExplosive = getDice(expression).endsWith("!");
+  let total = sum(results, isExplosive);
 
   if (dropInvoked) {
     const xX = getDrop(expression).replace("-", "");
@@ -45,7 +46,6 @@ export function evaluate(expression: string): number {
         throw new Error("Unrecognized drop symbol");
     }
   }
-  let total = sum(results, isExplosive);
   if (operandInvoked) {
     const op = opReg.exec(expression)![0];
     const oX = op
