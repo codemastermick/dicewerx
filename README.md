@@ -16,3 +16,8 @@ evaluate("4d6-L+50")  // Rolls 4 d6, drops the lowest, then adds 50 to the resul
 evaluate(1d20!)       // Rolls 1 d20, rolling again on a 20
 evaluate(4d6!-5)       // Rolls 4 d6, rolling again on a 6 then subtracting 5 from the result
 ```
+
+## Roadmap
+
+- Nested expression support
+- Major cleanup
