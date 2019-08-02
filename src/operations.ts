@@ -8,6 +8,7 @@ export function dropLowest(numbers: Die[]): Die[] {
   }
   return dice;
 }
+
 export function dropHighest(numbers: Die[]): Die[] {
   const dice = [];
   numbers.sort();
@@ -17,6 +18,7 @@ export function dropHighest(numbers: Die[]): Die[] {
   }
   return dice;
 }
+
 export function sum(numbers: Die[]): number {
   let total = 0;
   for (const die of numbers) {
