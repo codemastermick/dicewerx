@@ -19,17 +19,10 @@ export function dropHighest(numbers: Die[]): Die[] {
   return dice;
 }
 
-export function sum(numbers: Die[], isExplosive: boolean): number {
+export function sum(numbers: Die[]): number {
   let total = 0;
   for (const die of numbers) {
-    let result = die.roll();
-    total += result;
-    if (isExplosive) {
-      while (result === die.sides) {
-        result = die.roll();
-        total += result;
-      }
-    }
+    total += die.roll();
   }
   return total;
 }

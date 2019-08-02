@@ -1,5 +1,6 @@
 import { dropHighest, dropLowest, sum } from "./operations";
-import { forgeDiceFromExpression } from "./diceforge";
+import { forge } from "./diceforge";
+import { Die } from "./die";
 
 export const toRollReg = new RegExp("(\\dd\\d+!?)");
 export const xReg = new RegExp("(-[HL])");
@@ -26,12 +27,22 @@ export function getOperator(expression: string): string {
     return "null";
   }
 }
+export function getRolls(expression: string)/*: Die[] */{
+  const dropInvoked = getDrop(expression) !== "null";
+  const operandInvoked = getOperator(expression) !== "null";
+
+  const dice = getDice(expression).split("d");
+  const toRoll = dice[0];
+  const sides = dice[1];
+  const isExplosive = dice[1].endsWith("!");
+}
+
 export function evaluate(expression: string): number {
-  let results = forgeDiceFromExpression(expression);
+  let results = forge(expression);
   const dropInvoked = getDrop(expression) !== "null";
   const operandInvoked = getOperator(expression) !== "null";
   const isExplosive = getDice(expression).endsWith("!");
-  let total = sum(results, isExplosive);
+  let total = sum(results);
 
   if (dropInvoked) {
     const xX = getDrop(expression).replace("-", "");
