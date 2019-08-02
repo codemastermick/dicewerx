@@ -1,7 +1,7 @@
 {
   "name": "dicewerx",
   "version": "1.1.5",
-  "description": "Standard dice notation parser and evaluator for npm, written in TypeScript",
+  "description": "Standard dice notation parser and evaluator, written in TypeScript",
   "main": "dist/index.js",
   "scripts": {
     "test": "mocha --reporter spec",
@@ -15,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/codemastermick/dicewerx.git"
   },
-  "author": "codemastermick <codemastermick@gmail.com> (https://github.com/codemastermick)",
+  "author": "Mick Evans <codemastermick@gmail.com> (https://github.com/codemastermick)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/codemastermick/dicewerx/issues"
