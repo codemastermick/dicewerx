@@ -34,13 +34,6 @@ export function sum(numbers: Die[], isExplosive: boolean): number {
   return total;
 }
 
-export function add(dieA: Die, dieB: Die): Die[] {
-  const dice = [];
-  dice[0] = dieA;
-  dice[1] = dieB;
-  return dice;
-}
-
 export function rollMax(dice: Die[]): number {
   let total = 0;
   for (const die of dice) {
