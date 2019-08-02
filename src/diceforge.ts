@@ -20,7 +20,7 @@ export function forge(expression: string): Die[] {
   for (let i = 0; i < toRoll; i++) {
     const die = new Die(sides);
     dice[i] = die;
-    if (die.result === sides) {
+    if (die.result === sides && dX[1].endsWith("!")) {
       toRoll++;
       dice[toRoll] = new Die(sides);
     }
