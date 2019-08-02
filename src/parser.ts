@@ -1,7 +1,7 @@
 import { dropHighest, dropLowest, sum } from "./operations";
 import { forgeDiceFromExpression } from "./diceforge";
 
-export const toRollReg = new RegExp("(\\dd\\d+)");
+export const toRollReg = new RegExp("(\\dd\\d+!?)");
 export const xReg = new RegExp("(-[HL])");
 export const opReg = new RegExp("([+-/*]\\d\\w+)");
 
