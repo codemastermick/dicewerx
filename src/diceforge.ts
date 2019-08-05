@@ -1,28 +1,22 @@
 import { Die } from "./die";
-
-export function forgeDiceFromExpression(expression: string): Die[] {
-  const dX = expression.split("d");
-  const toRoll = Number.parseInt(dX[0], undefined);
-  const sides = Number.parseInt(dX[1], undefined);
-  const dice = [];
-  for (let i = 0; i < toRoll; i++) {
-    const die = new Die(sides);
-    dice[i] = die;
-  }
-  return dice;
-}
-
+/**
+ * Create dice based on the input expression
+ * @remarks
+ * Handles explosive dice
+ * @param expression - The string to parse for a dice expression
+ * @returns An array of dice
+ */
 export function forge(expression: string): Die[] {
-  const dX = expression.split("d");
-  let toRoll = Number.parseInt(dX[0], undefined);
-  const sides = Number.parseInt(dX[1], undefined);
+  const dX = expression.split("d");                // cut up the expression
+  let toRoll = Number.parseInt(dX[0], undefined);  // we use let instead of const so we can explode
+  const sides = Number.parseInt(dX[1], undefined); // we use this to create new dice
   const dice = [];
   for (let i = 0; i < toRoll; i++) {
-    const die = new Die(sides);
-    dice[i] = die;
-    if (die.result === sides && dX[1].endsWith("!")) {
-      toRoll++;
-      dice[toRoll] = new Die(sides);
+    const die = new Die(sides);                    // create a new Die
+    dice[i] = die;                                 // assign it to the array
+    if (die.result === sides && dX[1].endsWith("!")) { // if result is max and the roll is explosive
+      toRoll++;                                    // increment toRoll
+      dice[toRoll] = new Die(sides);               // add a new die to the end
     }
   }
   return dice;
