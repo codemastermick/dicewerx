@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "Configuring git"
-git config --global user.name $GH_TOKEN
+git config --global user.name "Travis CI"
 git config --global user.email "travis@travis-ci.org"
 echo "Logged in as:"
 git config --global user.name
