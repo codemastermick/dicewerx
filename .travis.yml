@@ -32,7 +32,7 @@ deploy:
 - provider: npm
   email: "codemastermick@gmail.com"
   api_key: $NPM_TOKEN
-  tag: next
+  tag: latest
   skip_cleanup: true
   on:
     tags: true
