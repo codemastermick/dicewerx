@@ -4,10 +4,11 @@
   "description": "Standard dice notation parser and evaluator, written in TypeScript",
   "main": "dist/index.js",
   "scripts": {
+    "lint": "tslint --project \"./tsconfig.json\"",
     "pretest": "npm run build",
     "test": "mocha --reporter spec",
-    "build": "tsc",
-    "lint": "tslint --project \"./tsconfig.json\"",
+    "compile:docs":"typedoc --out ./docs/ ./src/ && echo off >> ./docs/.nojekyll",
+    "build": "tsc && compile:docs",
     "prep": "npm run lint && npm run test",
     "upload": "npm run prep && npm publish"
   },
@@ -28,6 +29,7 @@
     "chai": "^4.2.0",
     "mocha": "^6.2.0",
     "tslint": "^5.18.0",
+    "typedoc": "^0.15.0",
     "typescript": "^3.5.3"
   },
   "files": [
