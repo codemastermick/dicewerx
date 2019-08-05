@@ -24,11 +24,12 @@ evaluate("4d6!-5") # Rolls 4 d6, rolling again on a 6 then subtracting 5 from th
 ```
 
 ## Getting Started
+
 See the getting started guide [here](https://github.com/codemastermick/dicewerx/wiki#getting-started).
 
 ## Roadmap
 
-  + Nested expression support (multiple expressions in one expression)
+* Nested expression support (multiple expressions in one expression)
 
 ## Documentation
 
