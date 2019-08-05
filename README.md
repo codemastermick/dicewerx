@@ -30,9 +30,8 @@ See the getting started guide [here](https://github.com/codemastermick/dicewerx/
 
 ## Roadmap
 
-* Nested expression support (multiple expressions in one expression)
+*   Nested expression support (multiple expressions in one expression)
 
 ## Documentation
 
 Current documentation is available [here](https://codemastermick.github.io/dicewerx/index.html).
-
