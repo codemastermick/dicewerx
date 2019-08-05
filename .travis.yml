@@ -9,4 +9,4 @@ script:
   - npm run test
   - istanbul cover ./node_modules/mocha/bin/_mocha --reporter test -- -R spec
 after_success:
-  - codecov
+  - npm run report-coverage
