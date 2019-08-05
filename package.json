@@ -1,6 +1,6 @@
 {
   "name": "dicewerx",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Standard dice notation parser and evaluator, written in TypeScript",
   "main": "dist/index.js",
   "scripts": {
@@ -14,8 +14,8 @@
     "publish:docs": "git add . && git commit -m \"chore: regenerate docs [ci skip]\" && git push",
     "build": "tsc && npm run compile:docs",
     "prep": "npm run lint && npm run test",
-    "publish": "npm run upload && npm run publish:docs",
     "upload": "npm run prep && npm publish",
+    "publish": "npm run upload && npm run publish:docs",
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "repository": {
