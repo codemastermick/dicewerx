@@ -20,7 +20,6 @@ evaluate("4d6!-5")   // Rolls 4 d6, rolling again on a 6 then subtracting 5 from
 ## Roadmap
 
 - Nested expression support
-- Major cleanup
 
 ## Documentation
 API Documentation is available [here](https://codemastermick.github.io/dicewerx/index.html)
