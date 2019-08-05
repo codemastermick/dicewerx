@@ -15,10 +15,18 @@ after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
   - bash <(curl -s https://codecov.io/bash) -f coverage/lcov.info
 deploy:
-  provider: npm
+- provider: releases
+  api_key: $GH_TOKEN
+  file_glob: true
+  file: "{dicewerx}-*.tgz"
+  skip_cleanup: true
+  on:
+    tags: true
+- provider: npm
   email: "codemastermick@gmail.com"
   api_key: $NPM_TOKEN
   tag: next
+  skip_cleanup: true
   on:
     tags: true
 after_success:
