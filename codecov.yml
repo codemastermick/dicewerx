@@ -85,3 +85,6 @@ fixes: # [advanced] in rare cases the report tree is invalid, specify adjustment
  # option: "once" post once then updates, if deleted do not post new
  # option: "new" delete old, post new
  # option: "spammy" post new
+ parsers:
+  javascript:
+    enable_partials: yes
