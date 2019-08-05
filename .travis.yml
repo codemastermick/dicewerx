@@ -25,3 +25,4 @@ after_success:
   - git config --global user.email "travis@travis-ci.org"
   - git config --global user.name "Travis CI"
   - sh .travis/upload_docs.sh
+  - sh .travis/upload_changelog.sh
