@@ -2,7 +2,6 @@
 
 npm package for handling standard dice notation
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2c829abdda8747998a01d520f9ed7b0e)](https://app.codacy.com/app/codemastermick/dicewerx?utm_source=github.com&utm_medium=referral&utm_content=codemastermick/dicewerx&utm_campaign=Badge_Grade_Dashboard)
 [![npm (tag)](https://img.shields.io/npm/v/dicewerx/latest)](https://www.npmjs.com/package/dicewerx)
 [![npm (tag)](https://img.shields.io/npm/v/dicewerx/beta)](https://www.npmjs.com/package/dicewerx)
 [![GitHub](https://img.shields.io/github/license/codemastermick/dicewerx)](https://github.com/codemastermick/dicewerx/blob/master/LICENSE)
@@ -10,6 +9,7 @@ npm package for handling standard dice notation
 
 [![Build Status](https://travis-ci.org/codemastermick/dicewerx.svg?branch=master)](https://travis-ci.org/codemastermick/dicewerx)
 [![Greenkeeper badge](https://badges.greenkeeper.io/codemastermick/dicewerx.svg)](https://greenkeeper.io/)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2c829abdda8747998a01d520f9ed7b0e)](https://app.codacy.com/app/codemastermick/dicewerx?utm_source=github.com&utm_medium=referral&utm_content=codemastermick/dicewerx&utm_campaign=Badge_Grade_Dashboard)
 
 A standard dice notation parser and evaluator. Can handle standard dice notation expressions and returns the results of the expression as a number.
 
