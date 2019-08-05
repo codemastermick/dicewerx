@@ -6,6 +6,7 @@ npm package for handling standard dice notation
 [![npm (tag)](https://img.shields.io/npm/v/dicewerx/beta)](https://www.npmjs.com/package/dicewerx)
 [![GitHub](https://img.shields.io/github/license/codemastermick/dicewerx)](https://github.com/codemastermick/dicewerx/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/codemastermick/dicewerx)](https://github.com/codemastermick/dicewerx/issues)
+[![npm](https://img.shields.io/npm/dw/dicewerx)](https://www.npmjs.com/package/dicewerx)
 
 [![Build Status](https://travis-ci.org/codemastermick/dicewerx.svg?branch=master)](https://travis-ci.org/codemastermick/dicewerx)
 [![Greenkeeper badge](https://badges.greenkeeper.io/codemastermick/dicewerx.svg)](https://greenkeeper.io/)
