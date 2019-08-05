@@ -1,22 +1,36 @@
 #!/bin/sh
+# Credit: https://gist.github.com/willprice/e07efd73fb7f13f917ea
 
-echo "Configuring git"
-git config --global user.name "Travis CI"
-git config --global user.email "travis@travis-ci.org"
-echo "Logged in as:"
-git config --global user.name
+setup_git() {
+  git config --global user.email "travis@travis-ci.org"
+  git config --global user.name "Travis CI"
+}
 
-git add ./docs/
-git commit -m "chore: regenerate docs build:$TRAVIS_BUILD_NUMBER [ci skip]"
+commit_files() {
+  git checkout master
+  # Stage the modified files in docs
+  git add -f docs/
+  # Create a new commit with a custom build message
+  # with "[skip ci]" to avoid a build loop
+  # and Travis build number for reference
+  git commit -m "Regnerate docs: build $TRAVIS_BUILD_NUMBER [skip ci]"
+}
+
+upload_files() {
+  # Remove existing "origin"
+  git remote rm origin
+  # Add new "origin" with access token in the git URL for authentication
+  git remote add origin https://codemastermick:${GH_TOKEN}@github.com/codemastermick/dicewerx.git > /dev/null 2>&1
+  git push origin master --quiet
+}
+
+setup_git
+commit_files
 
 # Attempt to commit to git only if "git commit" succeeded
 if [ $? -eq 0 ]; then
-    echo "A new commit with changed documentation exists. Uploading to GitHub"
-    # Add new "origin" with access token in the git URL for authentication
-    git remote set-url origin https://codemastermick:${GH_TOKEN}@github.com/codemastermick/dicewerx.git >/dev/null 2>&1
-    git push origin master --quiet
+  echo "A new commit with changed documentation exists. Uploading to GitHub"
+  upload_files
 else
-    echo "No changes in documentation files. Nothing to do"
+  echo "No changes in documentation files. Nothing to do"
 fi
-
-echo "Documentation publishing complete"

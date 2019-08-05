@@ -22,5 +22,4 @@ deploy:
   on:
     tags: true
 after_success:
-  - chmod a+x .travis/push.sh
-  - .travis/push.sh
+  - sh .travis/push.sh
