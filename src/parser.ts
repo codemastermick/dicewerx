@@ -10,7 +10,7 @@ function getMatch(regex: RegExp, expression: string): string {
   if (regex.test(expression)) {
     return regex.exec(expression)![0];
   } else {
-    return "null"
+    return "null";
   }
 }
 
@@ -52,8 +52,7 @@ export function getOperator(expression: string): string {
 
 function processDrop(expression: string, results: Die[]) {
   const ex = getDrop(expression).replace("-", "- ").split(" ");
-  switch (ex[1]) // check what the remaining character is
-  {
+  switch (ex[1]) {
     case "H": // if the character was an H
       results = dropHighest(results); // drop the highest die
       break;
@@ -67,7 +66,7 @@ function processDrop(expression: string, results: Die[]) {
 }
 
 function processOperator(expression: string, total: number) {
-  const oX = getOperator(expression) // replace each symbol with itself plus a space so we can split on spaces
+  const oX = getOperator(expression) // clean string so we can split on spaces
     .replace("+", "+ ")
     .replace("-", "- ")
     .replace("*", "* ")
