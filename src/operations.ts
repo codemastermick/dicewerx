@@ -1,5 +1,14 @@
 import { Die } from "./die";
 
+function assembleNumbers(numbers: Die[]): Die[] {
+  const newArray: Die[] = [];
+  for (let i = 1; i < numbers.length; i++) {
+    // start from one so we miss the lowest number
+    newArray[i - 1] = numbers[i]; // add the die to the temp array
+  }
+  return newArray;
+}
+
 /**
  * Drops the highest die in the set
  * @remarks
@@ -8,13 +17,8 @@ import { Die } from "./die";
  * @returns The same set without the highest result that was rolled
  */
 export function dropLowest(numbers: Die[]): Die[] {
-  const dice = []; // create a temporary array
   numbers.sort(); // put the array in numerical order
-  for (let i = 1; i < numbers.length; i++) {
-    // start from one so we miss the lowest number
-    dice[i - 1] = numbers[i]; // add the die to the temp array
-  }
-  return dice; // return the newly formed temp array
+  return assembleNumbers(numbers); // return the array with the lowest element missing
 }
 
 /**
@@ -25,14 +29,9 @@ export function dropLowest(numbers: Die[]): Die[] {
  * @returns The same set without the lowest result that was rolled
  */
 export function dropHighest(numbers: Die[]): Die[] {
-  const dice = []; // create a temporary array
   numbers.sort(); // put the array in numerical order
   numbers.reverse(); // now reverse it so high numbers come first
-  for (let i = 1; i < numbers.length; i++) {
-    // start from one so we miss the highest number
-    dice[i - 1] = numbers[i]; // add the die to the temp array
-  }
-  return dice; // return the newly formed temp array
+  return assembleNumbers(numbers); // return the array with the highest element missing
 }
 
 /**

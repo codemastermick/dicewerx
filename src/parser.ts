@@ -5,6 +5,14 @@ export const toRollReg = new RegExp("(\\dd\\d+!?)"); // searches for #d#, option
 export const xReg = new RegExp("(-[HL])");           // searches for -H or -L
 export const opReg = new RegExp("([+-/*]\\d\\w+)");  // searches for +#, -#, *# and /#
 
+function getMatch(regex: RegExp, expression: string): string {
+  if (regex.test(expression)) {
+    return regex.exec(expression)![0];
+  } else {
+    return "null"
+  }
+}
+
 /**
  * Returns a string representation of dice to be rolled
  * @remarks
@@ -29,12 +37,7 @@ export function getDice(expression: string): string {
  * @returns A string representation of dice to be dropped
  */
 export function getDrop(expression: string): string {
-  if (xReg.test(expression)) {
-    // check right away if the regex would return a match
-    return xReg.exec(expression)![0]; // return the first regex match for -[HL]
-  } else {
-    return "null"; // no regex match so just return null
-  }
+  return getMatch(xReg, expression);
 }
 
 /**
@@ -43,12 +46,7 @@ export function getDrop(expression: string): string {
  * @returns A string representation of operator to apply
  */
 export function getOperator(expression: string): string {
-  if (opReg.test(expression)) {
-    // check right away if the regex would return a match
-    return opReg.exec(expression)![0]; // return the first regex match for [+-*/]
-  } else {
-    return "null"; // no regex match so just return null
-  }
+  return getMatch(opReg, expression);
 }
 
 /**
@@ -65,7 +63,7 @@ export function evaluate(expression: string): number {
     // since we got a request to drop something
     const xX = getDrop(expression).replace("-", ""); // remove the - from the string
     switch (
-      xX // check what the remaining character is
+    xX // check what the remaining character is
     ) {
       case "H": // if the character was an H
         results = dropHighest(results); // drop the highest die
