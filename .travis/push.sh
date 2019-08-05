@@ -18,11 +18,4 @@ upload_files() {
 
 setup_git
 commit_files
-
-# Attempt to commit to git only if "git commit" succeeded
-if [ $? -eq 0 ]; then
-  echo "A new commit with changed documentation exists. Uploading to GitHub"
-  upload_files
-else
-  echo "No changes in documentation files. Nothing to do"
-fi
+upload_files
