@@ -18,7 +18,7 @@ export class Die {
    * @returns A random number between 1 and sides
    */
   public roll(): number {
-    this.result = Math.floor(Math.random() * this.sides + 1);
+    this.result = Math.abs(Math.floor(Math.random() * this.sides + 1));
     return this.result;
   }
 }
