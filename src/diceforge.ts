@@ -11,7 +11,7 @@ function testExpression(expression: string): boolean {
  * @param expression - The string to parse for a dice expression
  * @returns An array of dice
  */
-export function forge(expression: string): Die[] {
+export function forgeDice(expression: string): Die[] {
   if (!testExpression(expression)) {
     throw new Error("Could not forge dice from expression: " + expression);
   }

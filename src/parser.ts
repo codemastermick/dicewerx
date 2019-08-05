@@ -1,5 +1,5 @@
 import { dropHighest, dropLowest, sum } from "./operations";
-import { forge } from "./diceforge";
+import { forgeDice } from "./diceforge";
 import { Die } from "./die";
 
 export const toRollReg = new RegExp("(\\dd\\d+!?)"); // searches for #d#, optionally ending with !
@@ -93,7 +93,7 @@ function processOperator(expression: string, total: number) {
  * @returns The result of the parsed die roll.
  */
 export function evaluate(expression: string): number {
-  let results = forge(expression); // create some dice to start with
+  let results = forgeDice(expression); // create some dice to start with
   const dropInvoked = getDrop(expression) !== "null"; // check if a drop operator has been set
   const operandInvoked = getOperator(expression) !== "null"; // check if an operation has been set
   if (dropInvoked) { // if a drop was requested
