@@ -21,3 +21,6 @@ deploy:
   tag: next
   on:
     tags: true
+after_success:
+  - npm run compile:docs
+  - .travis/push.sh
