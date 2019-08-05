@@ -5,4 +5,5 @@ install:
   - npm install
   - npm install -g istanbul
 script:
+  - npm run build
   - npm run test-with-coverage
