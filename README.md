@@ -2,6 +2,9 @@
 
 npm package for handling standard dice notation
 
+[![npm (tag)](https://img.shields.io/npm/v/dicewerx/latest)](https://www.npmjs.com/package/dicewerx)
+[![npm (tag)](https://img.shields.io/npm/v/dicewerx/beta)](https://www.npmjs.com/package/dicewerx)
+
 [![Build Status](https://travis-ci.org/codemastermick/dicewerx.svg?branch=master)](https://travis-ci.org/codemastermick/dicewerx)
 [![Greenkeeper badge](https://badges.greenkeeper.io/codemastermick/dicewerx.svg)](https://greenkeeper.io/)
 [![codecov](https://codecov.io/gh/codemastermick/dicewerx/branch/master/graph/badge.svg)](https://codecov.io/gh/codemastermick/dicewerx)
@@ -24,4 +27,4 @@ evaluate("4d6!-5")   // Rolls 4 d6, rolling again on a 6 then subtracting 5 from
 - Nested expression support
 
 ## Documentation
-API Documentation is available [here](https://codemastermick.github.io/dicewerx/index.html)
+Current documentation is available [here](https://codemastermick.github.io/dicewerx/index.html).
