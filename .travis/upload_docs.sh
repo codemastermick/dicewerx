@@ -1,7 +1,7 @@
 #!/bin/sh
 # Credit: https://gist.github.com/willprice/e07efd73fb7f13f917ea
 
-commit_files() {
+commit_docs() {
     # Stage the modified files in docs
     git add -f docs/
     # Create a new commit with a custom build message
@@ -19,7 +19,7 @@ upload_files() {
 }
 
 git checkout master
-commit_files
+commit_docs
 
 # Attempt to commit to git only if "git commit" succeeded
 if [ $? -eq 0 ]; then
