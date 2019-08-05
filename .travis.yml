@@ -24,8 +24,6 @@ deploy:
 after_success:
   - git config --global user.email "travis@travis-ci.org"
   - git config --global user.name "Travis CI"
-  - sh .travis/upload_docs.sh
-  - sh .travis/upload_changelog.sh
-  - git remote rm origin
-  - git remote add origin https://codemastermick:${GH_TOKEN}@github.com/codemastermick/dicewerx.git >/dev/null 2>&1
-  - git push origin master --quiet
+  - sh .travis/generate_docs.sh
+  - sh .travis/generate_changelog.sh
+  - sh .travis/push.sh
