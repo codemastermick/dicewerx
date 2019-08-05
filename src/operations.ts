@@ -34,6 +34,18 @@ export function dropHighest(numbers: Die[]): Die[] {
   return assembleNumbers(numbers); // return the array with the highest element missing
 }
 
+function sumDice(dice: Die[], getMax = false): number {
+  let total = 0;
+  for (const die of dice) {
+    if (getMax) {
+      total += die.sides;
+    } else {
+      total += die.result;
+    }
+  }
+  return total;
+}
+
 /**
  * Rolls the dice and returns the actual result
  * @remarks
@@ -42,11 +54,7 @@ export function dropHighest(numbers: Die[]): Die[] {
  * @returns The result for the set of dice
  */
 export function sum(numbers: Die[]): number {
-  let total = 0;
-  for (const die of numbers) {
-    total += die.result;
-  }
-  return total;
+  return sumDice(numbers);
 }
 
 /**
@@ -57,11 +65,7 @@ export function sum(numbers: Die[]): number {
  * @returns The highest possible result for the set of dice
  */
 export function rollMax(dice: Die[]): number {
-  let total = 0;
-  for (const die of dice) {
-    total += die.sides;
-  }
-  return total;
+  return sumDice(dice, true);
 }
 
 /**
