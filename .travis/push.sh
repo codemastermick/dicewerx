@@ -5,7 +5,7 @@ setup_git() {
     git config --global user.email "travis@travis-ci.org"
 }
 
-commit_website_files() {
+commit_files() {
     git add ./docs/
     git commit -m "chore: regenerate docs build:$TRAVIS_BUILD_NUMBER [ci skip]"
 }
@@ -17,7 +17,7 @@ upload_files() {
 }
 
 setup_git
-commit_website_files
+commit_files
 
 # Attempt to commit to git only if "git commit" succeeded
 if [ $? -eq 0 ]; then
