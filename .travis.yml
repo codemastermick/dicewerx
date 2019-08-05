@@ -3,10 +3,6 @@ node_js:
   - stable
 install:
   - npm install
-  - npm install -g codecov
   - npm install -g istanbul
 script:
   - npm run test
-  - istanbul cover ./node_modules/mocha/bin/_mocha --reporter test -- -R spec
-after_success:
-  - npm run report-coverage

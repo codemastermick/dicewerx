@@ -9,7 +9,6 @@ npm package for handling standard dice notation
 
 [![Build Status](https://travis-ci.org/codemastermick/dicewerx.svg?branch=master)](https://travis-ci.org/codemastermick/dicewerx)
 [![Greenkeeper badge](https://badges.greenkeeper.io/codemastermick/dicewerx.svg)](https://greenkeeper.io/)
-[![codecov](https://codecov.io/gh/codemastermick/dicewerx/branch/master/graph/badge.svg)](https://codecov.io/gh/codemastermick/dicewerx)
 
 A standard dice notation parser and evaluator. Can handle standard dice notation expressions and returns the results of the expression as a number.
 
