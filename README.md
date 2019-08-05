@@ -23,10 +23,14 @@ evaluate("1d20!") # Rolls 1 d20, rolling again on a 20
 evaluate("4d6!-5") # Rolls 4 d6, rolling again on a 6 then subtracting 5 from the result
 ```
 
+## Getting Started
+See the getting started guide [here](https://github.com/codemastermick/dicewerx/wiki#getting-started).
+
 ## Roadmap
 
-  + Nested expression support
+  + Nested expression support (multiple expressions in one expression)
 
 ## Documentation
 
 Current documentation is available [here](https://codemastermick.github.io/dicewerx/index.html).
+
