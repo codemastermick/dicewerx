@@ -9,7 +9,7 @@ import { Die } from "./die";
 export function forge(expression: string): Die[] {
   const dX = expression.split("d");                          // cut up the expression
   let toRoll = Math.abs(Number.parseInt(dX[0], undefined));  // use let so we can explode
-  const sides = Math.abs(Number.parseInt(dX[1], undefined)); // we use this to create new dice
+  const sides = Math.abs(Number.parseInt(dX[1].replace("!",""), undefined)); // sides per die
   const dice = [];                                           // used to hold the new dice
   for (let i = 0; i < toRoll; i++) {                         // iterate over the dice to create
     const die = new Die(sides);                              // create a new Die
