@@ -14,3 +14,10 @@ script:
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
   - bash <(curl -s https://codecov.io/bash)
+deploy:
+  provider: npm
+  email: "codemastermick@gmail.com"
+  api_key: $NPM_TOKEN
+  tag: next
+  on:
+    tags: true
