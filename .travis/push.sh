@@ -1,8 +1,8 @@
 #!/bin/sh
 
 setup_git() {
-    git config --global user.name "Mick Evans"
-    git config --global user.email "codemastermick@gmail.com"
+    git config --global user.name "Travis CI"
+    git config --global user.email "travis@travis-ci.org"
 }
 
 commit_website_files() {
@@ -11,7 +11,7 @@ commit_website_files() {
 }
 
 upload_files() {
-    git remote add origin https://${GH_TOKEN}@github.com/codemastermick/dicewerx.git >/dev/null 2>&1
+    git remote add origin https://${GH_TOKEN}@github.com/codemastermick/dicewerx.git git 
     git push --quiet --set-upstream origin master
 }
 
