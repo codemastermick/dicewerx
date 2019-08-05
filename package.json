@@ -16,7 +16,8 @@
     "prep": "npm run lint && npm run test",
     "publish": "npm run upload && npm run publish:docs",
     "upload": "npm run prep && npm publish",
-    "version": "auto-changelog -p && git add CHANGELOG.md"
+    "version": "auto-changelog -p && git add CHANGELOG.md",
+    "upload:api": "firebase deploy --only hosting"
   },
   "repository": {
     "type": "git",
