@@ -8,7 +8,7 @@
     "pretest": "npm run build",
     "test": "mocha --reporter spec",
     "compile:docs":"typedoc --out ./docs/ ./src/ && echo off >> ./docs/.nojekyll",
-    "build": "tsc && compile:docs",
+    "build": "tsc && npm run compile:docs",
     "prep": "npm run lint && npm run test",
     "upload": "npm run prep && npm publish"
   },
