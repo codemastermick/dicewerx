@@ -8,7 +8,7 @@
     "pretest": "npm run build",
     "test": "nyc mocha --reporter spec",
     "testonly": "nyc mocha --reporter spec",
-    "test-with-coverage": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && type ./coverage/lcov.info | codacy-coverage --username codemastermick --projectName dicewerx",
+    "test-with-coverage": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && type ./coverage/lcov.info | codacy-coverage --accountToken $CODACY_ACCOUNT_TOKEN --username codemastermick --projectName dicewerx",
     "compile:docs": "typedoc --out ./docs/ ./src/ && echo off >> ./docs/.nojekyll",
     "publish:docs": "git add . && git commit -m \"chore: regenerate docs [ci skip]\" && git push",
     "build": "tsc && npm run compile:docs",
