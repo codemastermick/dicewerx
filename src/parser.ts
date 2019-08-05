@@ -72,15 +72,16 @@ function processOperator(expression: string, total: number) {
     .replace("*", "* ")
     .replace("/", "/ ")
     .split(" ");
+  const operand = Math.abs(Number(oX[1]));
   switch (oX[0]) { // switch on the left side of the operation and do the math with the right
     case "+":
-      return total + Number(oX[1]);
+      return total + operand;
     case "-":
-      return total - Number(oX[1]);
+      return total - operand;
     case "*":
-      return total * Number(oX[1]);
+      return total * operand;
     case "/":
-      return total / Number(oX[1]);
+      return total / operand;
     default:
       return -1;
   }
