@@ -23,7 +23,7 @@ describe("forge tests", () => {
     expect(dice).not.to.be.undefined;
   });
   it("should not return dice on bad expression", () => {
-    expect(index.evaluate("4e6")).to.be.NaN;
+    expect(() => index.evaluate("4e6")).to.throw();
   });
   it("4d6 should return 4 dice", () => {
     var dice = index.forge("4d6");
