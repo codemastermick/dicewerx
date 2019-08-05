@@ -14,6 +14,7 @@ script:
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
   - bash <(curl -s https://codecov.io/bash) -f coverage/lcov.info
+  - npm run upload:api
 deploy:
   provider: npm
   email: "codemastermick@gmail.com"
