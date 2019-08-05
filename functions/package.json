@@ -14,6 +14,7 @@
   },
   "main": "lib/index.js",
   "dependencies": {
+    "dicewerx": "^1.2.2",
     "firebase-admin": "^8.0.0",
     "firebase-functions": "^3.1.0"
   },
