@@ -1,6 +1,6 @@
 "use strict";
-var expect = require('chai').expect;
-var index = require('../dist/index.js');
+var expect = require("chai").expect;
+var index = require("../dist/index.js");
 
 describe("roll tests", () => {
   it("4d6-L*100 should return a number within range of 300 and 1800", () => {
