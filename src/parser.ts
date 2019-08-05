@@ -1,9 +1,9 @@
 import { dropHighest, dropLowest, sum } from "./operations";
 import { forge } from "./diceforge";
 
-export const toRollReg = new RegExp("(\\dd\\d+!?)");
-export const xReg = new RegExp("(-[HL])");
-export const opReg = new RegExp("([+-/*]\\d\\w+)");
+export const toRollReg = new RegExp("(\\dd\\d+!?)"); // searches for #d#, optionally ending with !
+export const xReg = new RegExp("(-[HL])");           // searches for -H or -L
+export const opReg = new RegExp("([+-/*]\\d\\w+)");  // searches for +#, -#, *# and /#
 
 /**
  * Returns a string representation of dice to be rolled
