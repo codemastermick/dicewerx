@@ -6,8 +6,9 @@
   "scripts": {
     "lint": "tslint --project \"./tsconfig.json\"",
     "pretest": "npm run build",
-    "test": "mocha --reporter spec",
-    "compile:docs":"typedoc --out ./docs/ ./src/ && echo off >> ./docs/.nojekyll",
+    "test": "nyc mocha --reporter spec",
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "compile:docs": "typedoc --out ./docs/ ./src/ && echo off >> ./docs/.nojekyll",
     "build": "tsc && npm run compile:docs",
     "prep": "npm run lint && npm run test",
     "upload": "npm run prep && npm publish"
@@ -28,6 +29,7 @@
     "@types/node": "^12.6.9",
     "chai": "^4.2.0",
     "mocha": "^6.2.0",
+    "nyc": "^14.1.1",
     "tslint": "^5.18.0",
     "typedoc": "^0.15.0",
     "typescript": "^3.5.3"
