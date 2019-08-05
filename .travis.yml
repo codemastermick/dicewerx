@@ -14,6 +14,13 @@ script:
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
   - bash <(curl -s https://codecov.io/bash) -f coverage/lcov.info
+after_success:
+  - git config --global user.email "travis@travis-ci.org"
+  - git config --global user.name "Travis CI"
+  - sh .travis/generate_docs.sh
+  - sh .travis/generate_changelog.sh
+  - sh .travis/push.sh
+  - npm pack
 deploy:
 - provider: releases
   api_key: $GH_TOKEN
@@ -29,9 +36,3 @@ deploy:
   skip_cleanup: true
   on:
     tags: true
-after_success:
-  - git config --global user.email "travis@travis-ci.org"
-  - git config --global user.name "Travis CI"
-  - sh .travis/generate_docs.sh
-  - sh .travis/generate_changelog.sh
-  - sh .travis/push.sh
