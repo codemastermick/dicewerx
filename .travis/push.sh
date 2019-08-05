@@ -7,14 +7,21 @@ setup_git() {
 
 commit_website_files() {
     git add ./docs/
-    git commit --message "chore: regenerate docs build:$TRAVIS_BUILD_NUMBER [ci skip]"
+    git commit -m "chore: regenerate docs build:$TRAVIS_BUILD_NUMBER [ci skip]"
 }
 
 upload_files() {
-    git remote add origin https://${GH_TOKEN}@github.com/codemastermick/dicewerx.git >/dev/null 2>&1
-    git push --quiet --set-upstream origin master
+    git remote add origin https://$GH_TOKEN@github.com/codemastermick/dicewerx.git >/dev/null 2>&1
+    git push origin master --quiet
 }
 
 setup_git
 commit_website_files
-upload_files
+
+# Attempt to commit to git only if "git commit" succeeded
+if [ $? -eq 0 ]; then
+  echo "A new commit with changed documentation exists. Uploading to GitHub"
+  upload_files
+else
+  echo "No changes in documentation files. Nothing to do"
+fi
