@@ -73,22 +73,29 @@
 					<a href="https://github.com/codemastermick/dicewerx/blob/master/LICENSE"><img src="https://img.shields.io/github/license/codemastermick/dicewerx" alt="GitHub"></a>
 				<a href="https://github.com/codemastermick/dicewerx/issues"><img src="https://img.shields.io/github/issues/codemastermick/dicewerx" alt="GitHub issues"></a></p>
 				<p><a href="https://travis-ci.org/codemastermick/dicewerx"><img src="https://travis-ci.org/codemastermick/dicewerx.svg?branch=master" alt="Build Status"></a>
-				<a href="https://greenkeeper.io/"><img src="https://badges.greenkeeper.io/codemastermick/dicewerx.svg" alt="Greenkeeper badge"></a></p>
+					<a href="https://greenkeeper.io/"><img src="https://badges.greenkeeper.io/codemastermick/dicewerx.svg" alt="Greenkeeper badge"></a>
+				<a href="https://app.codacy.com/app/codemastermick/dicewerx?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=codemastermick/dicewerx&amp;utm_campaign=Badge_Grade_Dashboard"><img src="https://api.codacy.com/project/badge/Grade/2c829abdda8747998a01d520f9ed7b0e" alt="Codacy Badge"></a></p>
+				<p><a href="https://codeclimate.com/github/codemastermick/dicewerx/maintainability"><img src="https://api.codeclimate.com/v1/badges/9adcb953e7cd3da79063/maintainability" alt="Maintainability"></a>
+				<a href="https://codeclimate.com/github/codemastermick/dicewerx/test_coverage"><img src="https://api.codeclimate.com/v1/badges/9adcb953e7cd3da79063/test_coverage" alt="Test Coverage"></a></p>
 				<p>A standard dice notation parser and evaluator. Can handle standard dice notation expressions and returns the results of the expression as a number.</p>
 				<a href="#examples" id="examples" style="color: inherit; text-decoration: none;">
 					<h2>Examples</h2>
 				</a>
-				<pre><code><span class="hljs-function"><span class="hljs-title">evaluate</span><span class="hljs-params">(<span class="hljs-string">"1d20"</span>)</span></span>     <span class="hljs-comment">// Rolls one d20</span>
-<span class="hljs-function"><span class="hljs-title">evaluate</span><span class="hljs-params">(<span class="hljs-string">"4d6-L"</span>)</span></span>    <span class="hljs-comment">// Rolls 4 d6 and drops the lowest result</span>
-<span class="hljs-function"><span class="hljs-title">evaluate</span><span class="hljs-params">(<span class="hljs-string">"4d4*10"</span>)</span></span>   <span class="hljs-comment">// Rolls 4 d4 and multiples the result by 10</span>
-<span class="hljs-function"><span class="hljs-title">evaluate</span><span class="hljs-params">(<span class="hljs-string">"4d6-L+50"</span>)</span></span> <span class="hljs-comment">// Rolls 4 d6, drops the lowest, then adds 50 to the result</span>
-<span class="hljs-function"><span class="hljs-title">evaluate</span><span class="hljs-params">(<span class="hljs-string">"1d20!"</span>)</span></span>    <span class="hljs-comment">// Rolls 1 d20, rolling again on a 20</span>
-<span class="hljs-function"><span class="hljs-title">evaluate</span><span class="hljs-params">(<span class="hljs-string">"4d6!-5"</span>)</span></span>   <span class="hljs-comment">// Rolls 4 d6, rolling again on a 6 then subtracting 5 from the result</span></code></pre>
+				<pre><code class="language-bash">evaluate(<span class="hljs-string">"1d20"</span>) <span class="hljs-comment"># Rolls one d20</span>
+evaluate(<span class="hljs-string">"4d6-L"</span>) <span class="hljs-comment"># Rolls 4 d6 and drops the lowest result</span>
+evaluate(<span class="hljs-string">"4d4*10"</span>) <span class="hljs-comment"># Rolls 4 d4 and multiples the result by 10</span>
+evaluate(<span class="hljs-string">"4d6-L+50"</span>) <span class="hljs-comment"># Rolls 4 d6, drops the lowest, then adds 50 to the result</span>
+evaluate(<span class="hljs-string">"1d20!"</span>) <span class="hljs-comment"># Rolls 1 d20, rolling again on a 20</span>
+evaluate(<span class="hljs-string">"4d6!-5"</span>) <span class="hljs-comment"># Rolls 4 d6, rolling again on a 6 then subtracting 5 from the result</span></code></pre>
+				<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
+					<h2>Getting Started</h2>
+				</a>
+				<p>See the getting started guide <a href="https://github.com/codemastermick/dicewerx/wiki#getting-started">here</a>.</p>
 				<a href="#roadmap" id="roadmap" style="color: inherit; text-decoration: none;">
 					<h2>Roadmap</h2>
 				</a>
 				<ul>
-					<li>Nested expression support</li>
+					<li>Nested expression support (multiple expressions in one expression)</li>
 				</ul>
 				<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
 					<h2>Documentation</h2>

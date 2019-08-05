@@ -84,7 +84,10 @@
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_parser_.html#evaluate" class="tsd-kind-icon">evaluate</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_parser_.html#getdice" class="tsd-kind-icon">get<wbr>Dice</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_parser_.html#getdrop" class="tsd-kind-icon">get<wbr>Drop</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_parser_.html#getmatch" class="tsd-kind-icon">get<wbr>Match</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_parser_.html#getoperator" class="tsd-kind-icon">get<wbr>Operator</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_parser_.html#processdrop" class="tsd-kind-icon">process<wbr>Drop</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_parser_.html#processoperator" class="tsd-kind-icon">process<wbr>Operator</a></li>
 							</ul>
 						</section>
 					</div>
@@ -98,7 +101,7 @@
 					<div class="tsd-signature tsd-kind-icon">op<wbr>Reg<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;new RegExp(&quot;([+-/*]\\d\\w+)&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/codemastermick/dicewerx/blob/ecdc326/src/parser.ts#L6">parser.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/codemastermick/dicewerx/blob/8ae1b3e/src/parser.ts#L7">parser.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -108,7 +111,7 @@
 					<div class="tsd-signature tsd-kind-icon">to<wbr>Roll<wbr>Reg<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;new RegExp(&quot;(\\dd\\d+!?)&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/codemastermick/dicewerx/blob/ecdc326/src/parser.ts#L4">parser.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/codemastermick/dicewerx/blob/8ae1b3e/src/parser.ts#L5">parser.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -118,7 +121,7 @@
 					<div class="tsd-signature tsd-kind-icon">x<wbr>Reg<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;new RegExp(&quot;(-[HL])&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/codemastermick/dicewerx/blob/ecdc326/src/parser.ts#L5">parser.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/codemastermick/dicewerx/blob/8ae1b3e/src/parser.ts#L6">parser.ts:6</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -135,7 +138,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/codemastermick/dicewerx/blob/ecdc326/src/parser.ts#L59">parser.ts:59</a></li>
+									<li>Defined in <a href="https://github.com/codemastermick/dicewerx/blob/8ae1b3e/src/parser.ts#L94">parser.ts:94</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -167,7 +170,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/codemastermick/dicewerx/blob/ecdc326/src/parser.ts#L16">parser.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/codemastermick/dicewerx/blob/8ae1b3e/src/parser.ts#L25">parser.ts:25</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -205,7 +208,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/codemastermick/dicewerx/blob/ecdc326/src/parser.ts#L31">parser.ts:31</a></li>
+									<li>Defined in <a href="https://github.com/codemastermick/dicewerx/blob/8ae1b3e/src/parser.ts#L40">parser.ts:40</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -227,6 +230,32 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="getmatch" class="tsd-anchor"></a>
+					<h3>get<wbr>Match</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Match<span class="tsd-signature-symbol">(</span>regex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RegExp</span>, expression<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/codemastermick/dicewerx/blob/8ae1b3e/src/parser.ts#L9">parser.ts:9</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>regex: <span class="tsd-signature-type">RegExp</span></h5>
+								</li>
+								<li>
+									<h5>expression: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
 					<a name="getoperator" class="tsd-anchor"></a>
 					<h3>get<wbr>Operator</h3>
@@ -237,7 +266,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/codemastermick/dicewerx/blob/ecdc326/src/parser.ts#L45">parser.ts:45</a></li>
+									<li>Defined in <a href="https://github.com/codemastermick/dicewerx/blob/8ae1b3e/src/parser.ts#L49">parser.ts:49</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -256,6 +285,58 @@
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 							<p>A string representation of operator to apply</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="processdrop" class="tsd-anchor"></a>
+					<h3>process<wbr>Drop</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">process<wbr>Drop<span class="tsd-signature-symbol">(</span>expression<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, results<span class="tsd-signature-symbol">: </span><a href="../classes/_die_.die.html" class="tsd-signature-type">Die</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_die_.die.html" class="tsd-signature-type">Die</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/codemastermick/dicewerx/blob/8ae1b3e/src/parser.ts#L53">parser.ts:53</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>expression: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>results: <a href="../classes/_die_.die.html" class="tsd-signature-type">Die</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/_die_.die.html" class="tsd-signature-type">Die</a><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="processoperator" class="tsd-anchor"></a>
+					<h3>process<wbr>Operator</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">process<wbr>Operator<span class="tsd-signature-symbol">(</span>expression<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, total<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/codemastermick/dicewerx/blob/8ae1b3e/src/parser.ts#L68">parser.ts:68</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>expression: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>total: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -304,8 +385,17 @@
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="_parser_.html#getdrop" class="tsd-kind-icon">get<wbr>Drop</a>
 					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_parser_.html#getmatch" class="tsd-kind-icon">get<wbr>Match</a>
+					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="_parser_.html#getoperator" class="tsd-kind-icon">get<wbr>Operator</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_parser_.html#processdrop" class="tsd-kind-icon">process<wbr>Drop</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_parser_.html#processoperator" class="tsd-kind-icon">process<wbr>Operator</a>
 					</li>
 				</ul>
 			</nav>
