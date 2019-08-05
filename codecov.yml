@@ -1,15 +1,15 @@
 Source: https://github.com/codecov/support/wiki/Codecov-Yaml#
 codecov:
- url: "string" # [enterprise] your self-hosted Codecov endpoint
+ #url: "string" # [enterprise] your self-hosted Codecov endpoint
  # ex. https://codecov.company.com
- slug: "owner/repo" # [enterprise] the project's name when using the global upload tokens
+ #slug: "owner/repo" # [enterprise] the project's name when using the global upload tokens
  branch: master # the branch to show by default, inherited from your git repository settings
  # ex. master, stable or release
  # default: the default branch in git/mercurial
  bot: username # the username that will consume any oauth requests
  # must have previously logged into Codecov
- ci: # [advanced] a list of custom CI domains
- - "ci.custom.com"
+ #ci: # [advanced] a list of custom CI domains
+ #- "ci.custom.com"
  notify: # [advanced] usage only
  after_n_builds: 5 # how many build to wait for before submitting notifications
  # therefore skipping status checks
