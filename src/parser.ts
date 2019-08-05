@@ -51,10 +51,9 @@ export function getOperator(expression: string): string {
 }
 
 function processDrop(expression: string, results: Die[]) {
-  const ex = getDrop(expression).replace("-", " ");
-  switch (
-  ex // check what the remaining character is
-  ) {
+  const ex = getDrop(expression).replace("-", "- ").split(" ");
+  switch (ex[1]) // check what the remaining character is
+  {
     case "H": // if the character was an H
       results = dropHighest(results); // drop the highest die
       break;
@@ -62,13 +61,13 @@ function processDrop(expression: string, results: Die[]) {
       results = dropLowest(results); // drop the lowest die
       break;
     default:
-      throw new Error("Unrecognized drop symbol :" + ex); // error: illegal parse drop symbol
+      throw new Error("Unrecognized drop symbol :" + ex[0]); // error: illegal drop symbol
   }
+  return results;
 }
 
 function processOperator(expression: string, total: number) {
-  const op = opReg.exec(expression)![0]; // get the operation regex
-  const oX = op // replace each symbol with itself plus a space so we can split on spaces
+  const oX = getOperator(expression) // replace each symbol with itself plus a space so we can split on spaces
     .replace("+", "+ ")
     .replace("-", "- ")
     .replace("*", "* ")
@@ -76,17 +75,15 @@ function processOperator(expression: string, total: number) {
     .split(" ");
   switch (oX[0]) { // switch on the left side of the operation and do the math with the right
     case "+":
-      total += Number(oX[1]);
-      break;
+      return total + Number(oX[1]);
     case "-":
-      total -= Number(oX[1]);
-      break;
+      return total - Number(oX[1]);
     case "*":
-      total *= Number(oX[1]);
-      break;
+      return total * Number(oX[1]);
     case "/":
-      total /= Number(oX[1]);
-      break;
+      return total / Number(oX[1]);
+    default:
+      return -1;
   }
 }
 
@@ -99,13 +96,12 @@ export function evaluate(expression: string): number {
   let results = forge(expression); // create some dice to start with
   const dropInvoked = getDrop(expression) !== "null"; // check if a drop operator has been set
   const operandInvoked = getOperator(expression) !== "null"; // check if an operation has been set
-
-  if (dropInvoked) {
-    processDrop(expression, results);
+  if (dropInvoked) { // if a drop was requested
+    results = processDrop(expression, results); // handle it now
   }
   let total = sum(results); // tally up the dice
   if (operandInvoked) { // if an operation was requested
-    processOperator(expression, total);
+    total = processOperator(expression, total); // process it now
   }
   return total; // return the result now that all operators have been applied
 }
