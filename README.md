@@ -1,17 +1,17 @@
-# dicewerx
+# Dicewerx
 
 npm package for handling standard dice notation
 
 [![npm (tag)](https://img.shields.io/npm/v/dicewerx/latest)](https://www.npmjs.com/package/dicewerx)
 [![npm (tag)](https://img.shields.io/npm/v/dicewerx/beta)](https://www.npmjs.com/package/dicewerx)
 [![GitHub](https://img.shields.io/github/license/codemastermick/dicewerx)](https://github.com/codemastermick/dicewerx/blob/master/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/codemastermick/dicewerx)](https://github.com/codemastermick/dicewerx/issues)
 [![npm](https://img.shields.io/npm/dw/dicewerx)](https://www.npmjs.com/package/dicewerx)
 
+[![GitHub issues](https://img.shields.io/github/issues/codemastermick/dicewerx)](https://github.com/codemastermick/dicewerx/issues)
 [![Build Status](https://travis-ci.org/codemastermick/dicewerx.svg?branch=master)](https://travis-ci.org/codemastermick/dicewerx)
 [![Greenkeeper badge](https://badges.greenkeeper.io/codemastermick/dicewerx.svg)](https://greenkeeper.io/)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2c829abdda8747998a01d520f9ed7b0e)](https://app.codacy.com/app/codemastermick/dicewerx?utm_source=github.com&utm_medium=referral&utm_content=codemastermick/dicewerx&utm_campaign=Badge_Grade_Dashboard)
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2c829abdda8747998a01d520f9ed7b0e)](https://app.codacy.com/app/codemastermick/dicewerx?utm_source=github.com&utm_medium=referral&utm_content=codemastermick/dicewerx&utm_campaign=Badge_Grade_Dashboard)
 [![Maintainability](https://api.codeclimate.com/v1/badges/9adcb953e7cd3da79063/maintainability)](https://codeclimate.com/github/codemastermick/dicewerx/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/9adcb953e7cd3da79063/test_coverage)](https://codeclimate.com/github/codemastermick/dicewerx/test_coverage)
 
