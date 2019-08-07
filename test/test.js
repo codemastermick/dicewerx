@@ -44,12 +44,12 @@ describe("drop tests", () => {
 
 describe("min/max tests", () => {
   it("min(2d6) should return 2", () => {
-    var dice = index.forge("2d6");
+    var dice = index.forgeDice("2d6");
     var result = index.rollMin(dice);
     expect(result).to.be.equal(2);
   });
   it("max(2d6) should return 12", () => {
-    var dice = index.forge("2d6");
+    var dice = index.forgeDice("2d6");
     var result = index.rollMax(dice);
     expect(result).to.be.equal(12);
   });
