@@ -10,7 +10,7 @@
     "testonly": "nyc --reporter=lcov mocha",
     "test-with-coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec",
     "codecov": "codecov",
-    "coverage": "type coverage/lcov.info | codacy-coverage --username codemastermick --projectName dicewerx",
+    "coverage": "cat coverage/lcov.info | codacy-coverage --username codemastermick --projectName dicewerx",
     "compile:docs": "typedoc --out ./docs/ ./src/ && echo off >> ./docs/.nojekyll",
     "publish:docs": "git add . && git commit -m \"chore: regenerate docs [ci skip]\" && git push",
     "docs":"npm run compile:docs && npm run publish:docs",

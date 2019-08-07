@@ -16,6 +16,7 @@ after_script:
   - npm run coverage
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
   - bash <(curl -s https://codecov.io/bash) -f coverage/lcov.info
+  - npm run coverage
 after_success:
   - echo "Preparing to upload to GitHub"
   - git config --global user.email "travis@travis-ci.org"
