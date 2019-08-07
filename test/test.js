@@ -19,14 +19,14 @@ describe("roll tests", () => {
 
 describe("forge tests", () => {
   it("should return a set of dice", () => {
-    var dice = index.forge("4d6");
+    var dice = index.forgeDice("4d6");
     expect(dice).not.to.be.undefined;
   });
   it("should not return dice on bad expression", () => {
     expect(() => index.evaluate("4e6")).to.throw();
   });
   it("4d6 should return 4 dice", () => {
-    var dice = index.forge("4d6");
+    var dice = index.forgeDice("4d6");
     expect(dice.length).to.be.equal(4);
   });
 });
