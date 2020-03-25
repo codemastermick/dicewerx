@@ -33,7 +33,7 @@
   "devDependencies": {
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.7",
-    "@types/node": "^12.6.9",
+    "@types/node": "^13.9.4",
     "auto-changelog": "^1.14.1",
     "chai": "^4.2.0",
     "codacy-coverage": "^3.4.0",
